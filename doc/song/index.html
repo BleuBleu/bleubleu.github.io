@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,15 +12,16 @@
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Editing Songs & Project - FamiStudio Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/darcula.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" >
         <link href="../css/extra.css" rel="stylesheet">
-
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -28,7 +29,7 @@
             <div class="container">
                 <a class="navbar-brand" href="..">FamiStudio Documentation</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -36,11 +37,11 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href=".." class="nav-link">Welcome</a>
                             </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">User Guide</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -64,7 +65,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Editing Songs & Project</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Editing Songs & Project</a>
 </li>
                                     
 <li>
@@ -108,8 +109,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Change Log <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -119,13 +120,17 @@
 <li>
     <a href="../releases/420/" class="dropdown-item">FamiStudio 4.2.0 Highlights</a>
 </li>
+                                    
+<li>
+    <a href="../releases/430/" class="dropdown-item">FamiStudio 4.3.0 Highlights</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -143,68 +148,69 @@
                 </div>
             </div>
         </div>
+        <script src="../js/darkmode.js"></script>
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#editing-projects" class="nav-link">Editing projects</a>
+            <li class="nav-item" data-bs-level="1"><a href="#editing-projects" class="nav-link">Editing projects</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#editing-project-properties" class="nav-link">Editing project properties</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#tempo-modes" class="nav-link">Tempo modes</a>
+            <li class="nav-item" data-bs-level="2"><a href="#editing-project-properties" class="nav-link">Editing project properties</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#expansion-audio" class="nav-link">Expansion audio</a>
+            <li class="nav-item" data-bs-level="2"><a href="#tempo-modes" class="nav-link">Tempo modes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#mixer-settings" class="nav-link">Mixer Settings</a>
+            <li class="nav-item" data-bs-level="2"><a href="#expansion-audio" class="nav-link">Expansion audio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mixer-settings" class="nav-link">Mixer Settings</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#editing-songs" class="nav-link">Editing songs</a>
+            <li class="nav-item" data-bs-level="1"><a href="#editing-songs" class="nav-link">Editing songs</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#addingdeleting-songs" class="nav-link">Adding/Deleting songs</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#reordering-songs-instruments-dpcm-samples-or-arpeggios" class="nav-link">Reordering songs, instruments, DPCM Samples or Arpeggios</a>
+            <li class="nav-item" data-bs-level="2"><a href="#addingdeleting-songs" class="nav-link">Adding/Deleting songs</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#importingmerging-songs" class="nav-link">Importing/Merging songs</a>
+            <li class="nav-item" data-bs-level="2"><a href="#reordering-songs-instruments-dpcm-samples-or-arpeggios" class="nav-link">Reordering songs, instruments, DPCM Samples or Arpeggios</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#editing-song-properties" class="nav-link">Editing song properties</a>
+            <li class="nav-item" data-bs-level="2"><a href="#importingmerging-songs" class="nav-link">Importing/Merging songs</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#tempo" class="nav-link">Tempo</a>
+            <li class="nav-item" data-bs-level="2"><a href="#editing-song-properties" class="nav-link">Editing song properties</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#example-of-time-signatures" class="nav-link">Example of time signatures</a>
+            <li class="nav-item" data-bs-level="2"><a href="#tempo" class="nav-link">Tempo</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#famistudio-tempo-pal-conversion" class="nav-link">FamiStudio Tempo &amp; PAL conversion</a>
+            <li class="nav-item" data-bs-level="2"><a href="#example-of-time-signatures" class="nav-link">Example of time signatures</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#famistudio-tempo-pal-conversion" class="nav-link">FamiStudio Tempo &amp; PAL conversion</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -221,6 +227,7 @@
 <h2 id="editing-project-properties">Editing project properties</h2>
 <p>Clicking on the little gear icon or selecting the "Project Properties..." option from the context menu of the project (first button in the project explorer) will allow you to change its name, author and copyright information. This information is used when exporting to NSF, for example.</p>
 <p><img alt="" src="../images/EditProject.png#center" /></p>
+<p>It is also possible to set the tuning to something other than A = 440Hz.</p>
 <h2 id="tempo-modes">Tempo modes</h2>
 <p>FamiStudio supports two tempo modes : <strong>FamiStudio</strong> and <strong>FamiTracker</strong>. </p>
 <p>The tempo mode will affect how the tempo of you songs is calculated, how much control you have over the notes of your song and how your song plays on PAL systems. Note that changing the tempo mode when you have songs created is possible, but not recommended, the conversion is still quite crude at the moment.</p>
@@ -393,19 +400,20 @@ Observations:</p>
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -425,7 +433,7 @@ Observations:</p>
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">

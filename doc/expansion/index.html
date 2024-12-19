@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,16 @@
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Using Expansion Audio - FamiStudio Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/darcula.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" >
         <link href="../css/extra.css" rel="stylesheet">
-
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -26,7 +27,7 @@
             <div class="container">
                 <a class="navbar-brand" href="..">FamiStudio Documentation</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -34,11 +35,11 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href=".." class="nav-link">Welcome</a>
                             </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">User Guide</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -78,7 +79,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Using Expansion Audio</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Using Expansion Audio</a>
 </li>
                                     
 <li>
@@ -106,8 +107,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Change Log <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -117,13 +118,17 @@
 <li>
     <a href="../releases/420/" class="dropdown-item">FamiStudio 4.2.0 Highlights</a>
 </li>
+                                    
+<li>
+    <a href="../releases/430/" class="dropdown-item">FamiStudio 4.3.0 Highlights</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -141,67 +146,68 @@
                 </div>
             </div>
         </div>
+        <script src="../js/darkmode.js"></script>
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#using-expansion-audio" class="nav-link">Using Expansion Audio</a>
+            <li class="nav-item" data-bs-level="1"><a href="#using-expansion-audio" class="nav-link">Using Expansion Audio</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#enabling-expansion-audio" class="nav-link">Enabling expansion audio</a>
+            <li class="nav-item" data-bs-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#expansion-instruments" class="nav-link">Expansion instruments</a>
+            <li class="nav-item" data-bs-level="2"><a href="#enabling-expansion-audio" class="nav-link">Enabling expansion audio</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#expansion-specific-information" class="nav-link">Expansion-Specific Information</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#vrc6" class="nav-link">VRC6</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#vrc7" class="nav-link">VRC7</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#famicom-disk-system" class="nav-link">Famicom Disk System</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#namco-163" class="nav-link">Namco 163</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#sunsoft-5b" class="nav-link">Sunsoft 5B</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#epsm" class="nav-link">EPSM</a>
+            <li class="nav-item" data-bs-level="2"><a href="#expansion-instruments" class="nav-link">Expansion instruments</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#resampling-wav-files-for-n163-and-fds" class="nav-link">Resampling WAV files for N163 and FDS</a>
+            <li class="nav-item" data-bs-level="1"><a href="#expansion-specific-information" class="nav-link">Expansion-Specific Information</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#vrc6" class="nav-link">VRC6</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#vrc7" class="nav-link">VRC7</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#famicom-disk-system" class="nav-link">Famicom Disk System</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#namco-163" class="nav-link">Namco 163</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sunsoft-5b" class="nav-link">Sunsoft 5B</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#epsm" class="nav-link">EPSM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#resampling-wav-files-for-n163-and-fds" class="nav-link">Resampling WAV files for N163 and FDS</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -240,7 +246,6 @@
 <h2 id="enabling-expansion-audio">Enabling expansion audio</h2>
 <p>The audio expansion(s) used is set in the project properties, which you can access by clicking on the gear next to the project name (first row in the Project Explorer).</p>
 <p><img alt="" src="../images/EditProject.png#center" /></p>
-<p>Enabling any kind of expansion audio will automatically disable PAL support since no audio expansion were ever available in PAL territories. </p>
 <p>Note that while using multiple audio expansion(s) is supported in FamiStudio, no NES game has ever shipped with multiple expansions. This probably would not have been possible for multiple reasons (cost, competing companies, hardware conflicts, etc.). So be aware that you are bending the rules of reality when using multiple expansions.</p>
 <h2 id="expansion-instruments">Expansion instruments</h2>
 <p>Almost all expansion audio requires using special instruments on the expansion channels, the only exception being MMC5 because of its similarity with the regular square channels.</p>
@@ -308,6 +313,9 @@
 <p>When changing the values of the sliders with huge values (such as the Mod Speed), you can hold Shift while dragging to fine tune the exact value.</p>
 <h2 id="namco-163">Namco 163</h2>
 <p>N163 instrument can have custom user-drawn waveforms. The size of the waveform is configurable, but limited by the amount of N163 RAM available, which decreases as more N163 channels are added. Waveforms can also be resampled from a WAV file, see the <a href="#resampling-wav-files-for-n163-and-fds">resampling section</a> for more details.</p>
+<p>Since the amount of RAM is limited, and there can be up to 8 channels playing at the same time, it is the user's responsability to make sure waves do not overlap. For example, if 2 N163 channels are playing 2 different instruments at the same time, a sine wave and a triangle wave, they will have to occupy different RAM locations. Both cannot be a RAM position 0, for example. If using a wave size of 32, we could place one at offset 0, and the second at offset 32. </p>
+<p>The register viewer can be used to dianose wave overlap issues. Look for error message in the RAM diagram if you think there are issues.</p>
+<p><img alt="" src="../images/N163Overlap.png#center" /></p>
 <p>FamiStudio also supports cycling through multiple waveform in time. All the waveforms are presented visually as a single massive waveform, and each individual waveform can be repeated for a number of frames by setting the value of the "Repeat" effect in the effect panel. Moreover, both Loop and Release points can be configured. The current maximum number of wave data is currently 1024 bytes per instrument. So a wave size of 32 will be limited to 32 individual waves, where as a wave size of 16 will be able to have twice that amount.</p>
 <p>In the example below, 4 waveforms are setup and the number of repeats for each increases over time.</p>
 <p><img alt="" src="../images/N163Repeat.png#center" /></p>
@@ -321,6 +329,7 @@
 <ul>
 <li><strong>Wave Preset</strong> : A few preset that you can use to set the waveform envelope.</li>
 <li><strong>Wave Size</strong> : The N163 chip had only 128 of RAM to store all the waveforms used at any given time. For example, if you use waveforms of size 32, you can only use 4 unique instrument at any given time. Using more will result in channels using wrong instruments.</li>
+<li><strong>Wave Auto-Position</strong> : Let FamiStudio automatically position the waves to try to avoid overlap. When this is active, every time you press Play, FamiStudio will scan all songs and all notes and try to assign a position to all the N163 instruments that have this option enabled. Note that this can fail if using too many large waves. When the auto-assignment algorithm fails, you will get no error message and will need to use the register viewer to diagnose issues, as mentioned above. </li>
 <li><strong>Wave Position</strong> : The position, in the 128 bytes of memory, of the waveform. You must manually make sure that different waveforms don't overlap.</li>
 <li><strong>Wave Count</strong> : The position, in the 128 bytes of memory, of the waveform. You must manually make sure that different waveforms don't overlap.</li>
 <li><strong>Resample Period</strong>, <strong>Offset</strong> and <strong>Normalize</strong> : See the <a href="#resampling-wav-files-for-n163-and-fds">resampling section</a></li>
@@ -385,19 +394,20 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -417,7 +427,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">

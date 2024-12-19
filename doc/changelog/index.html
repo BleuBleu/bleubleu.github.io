@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,15 +12,16 @@
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>All Version History - FamiStudio Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/darcula.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" >
         <link href="../css/extra.css" rel="stylesheet">
-
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -28,7 +29,7 @@
             <div class="container">
                 <a class="navbar-brand" href="..">FamiStudio Documentation</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -36,11 +37,11 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href=".." class="nav-link">Welcome</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">User Guide</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -108,24 +109,28 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Change Log <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">All Version History</a>
+    <a href="./" class="dropdown-item active" aria-current="page">All Version History</a>
 </li>
                                     
 <li>
     <a href="../releases/420/" class="dropdown-item">FamiStudio 4.2.0 Highlights</a>
 </li>
+                                    
+<li>
+    <a href="../releases/430/" class="dropdown-item">FamiStudio 4.3.0 Highlights</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -143,195 +148,200 @@
                 </div>
             </div>
         </div>
+        <script src="../js/darkmode.js"></script>
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
+            <li class="nav-item" data-bs-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#version-421-hotfix" class="nav-link">Version 4.2.1 (Hotfix)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#version-420" class="nav-link">Version 4.2.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-430" class="nav-link">Version 4.3.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-413-hotfix" class="nav-link">Version 4.1.3 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-421-hotfix" class="nav-link">Version 4.2.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-412-hotfix" class="nav-link">Version 4.1.2 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-420" class="nav-link">Version 4.2.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-411-hotfix" class="nav-link">Version 4.1.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-413-hotfix" class="nav-link">Version 4.1.3 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-410" class="nav-link">Version 4.1.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-412-hotfix" class="nav-link">Version 4.1.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-406-hotfix" class="nav-link">Version 4.0.6 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-411-hotfix" class="nav-link">Version 4.1.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-405-hotfix" class="nav-link">Version 4.0.5 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-410" class="nav-link">Version 4.1.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-404-hotfix" class="nav-link">Version 4.0.4 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-406-hotfix" class="nav-link">Version 4.0.6 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-403-hotfix" class="nav-link">Version 4.0.3 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-405-hotfix" class="nav-link">Version 4.0.5 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-402-hotfix" class="nav-link">Version 4.0.2 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-404-hotfix" class="nav-link">Version 4.0.4 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-401-linux-android-hotfix" class="nav-link">Version 4.0.1 (Linux &amp; Android Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-403-hotfix" class="nav-link">Version 4.0.3 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-400" class="nav-link">Version 4.0.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-402-hotfix" class="nav-link">Version 4.0.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-331-hotfix" class="nav-link">Version 3.3.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-401-linux-android-hotfix" class="nav-link">Version 4.0.1 (Linux &amp; Android Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-330" class="nav-link">Version 3.3.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-400" class="nav-link">Version 4.0.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-323-hotfix" class="nav-link">Version 3.2.3 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-331-hotfix" class="nav-link">Version 3.3.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-322-hotfix" class="nav-link">Version 3.2.2 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-330" class="nav-link">Version 3.3.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-321-hotfix" class="nav-link">Version 3.2.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-323-hotfix" class="nav-link">Version 3.2.3 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-320" class="nav-link">Version 3.2.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-322-hotfix" class="nav-link">Version 3.2.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-311-hotfix" class="nav-link">Version 3.1.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-321-hotfix" class="nav-link">Version 3.2.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-310" class="nav-link">Version 3.1.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-320" class="nav-link">Version 3.2.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-302-hotfix" class="nav-link">Version 3.0.2 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-311-hotfix" class="nav-link">Version 3.1.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-301-hotfix" class="nav-link">Version 3.0.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-310" class="nav-link">Version 3.1.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-300" class="nav-link">Version 3.0.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-302-hotfix" class="nav-link">Version 3.0.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-242-hotfix" class="nav-link">Version 2.4.2 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-301-hotfix" class="nav-link">Version 3.0.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-241-hotfix" class="nav-link">Version 2.4.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-300" class="nav-link">Version 3.0.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-240" class="nav-link">Version 2.4.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-242-hotfix" class="nav-link">Version 2.4.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-232-hotfix" class="nav-link">Version 2.3.2 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-241-hotfix" class="nav-link">Version 2.4.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-231-linux-hotfix" class="nav-link">Version 2.3.1 (Linux Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-240" class="nav-link">Version 2.4.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-230" class="nav-link">Version 2.3.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-232-hotfix" class="nav-link">Version 2.3.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-221-hotfix" class="nav-link">Version 2.2.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-231-linux-hotfix" class="nav-link">Version 2.3.1 (Linux Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-220" class="nav-link">Version 2.2.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-230" class="nav-link">Version 2.3.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-211-hotfix" class="nav-link">Version 2.1.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-221-hotfix" class="nav-link">Version 2.2.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-210" class="nav-link">Version 2.1.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-220" class="nav-link">Version 2.2.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-203-hotfix" class="nav-link">Version 2.0.3 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-211-hotfix" class="nav-link">Version 2.1.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-202-hotfix" class="nav-link">Version 2.0.2 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-210" class="nav-link">Version 2.1.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-201-hotfix" class="nav-link">Version 2.0.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-203-hotfix" class="nav-link">Version 2.0.3 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-200" class="nav-link">Version 2.0.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-202-hotfix" class="nav-link">Version 2.0.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-140" class="nav-link">Version 1.4.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-201-hotfix" class="nav-link">Version 2.0.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-130" class="nav-link">Version 1.3.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-200" class="nav-link">Version 2.0.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-121-hotfix" class="nav-link">Version 1.2.1 (Hotfix)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-140" class="nav-link">Version 1.4.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-120" class="nav-link">Version 1.2.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-130" class="nav-link">Version 1.3.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-110" class="nav-link">Version 1.1.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-121-hotfix" class="nav-link">Version 1.2.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-100" class="nav-link">Version 1.0.0</a>
+            <li class="nav-item" data-bs-level="2"><a href="#version-120" class="nav-link">Version 1.2.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-110" class="nav-link">Version 1.1.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-100" class="nav-link">Version 1.0.0</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -345,6 +355,37 @@
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release. </p>
 <p>To download older versions or view the release dates, please visit the <a href="https://github.com/BleuBleu/FamiStudio/releases">Github Releases</a> page.</p>
+<h2 id="version-430">Version 4.3.0</h2>
+<p><a href="../releases/430/"><img alt="" src="../releases/430/Thumbnail430.png#center" /></a></p>
+<p>Changes/Fixes:</p>
+<ul>
+<li>Support for custom tuning per project (ex: where A is not 440Hz)</li>
+<li>N163 wave auto position assignment</li>
+<li>Improve conflict resolution when copy-pasting between songs/projects</li>
+<li>New in-app font (Noto Sans) : More readable at low resolution and supports international characters</li>
+<li>Unifying UI code between desktop/mobile, mobile dialogs will now look and feel more like the desktop version</li>
+<li>Making more features available on mobile:<ul>
+<li>Shy mode</li>
+<li>MIDI import</li>
+<li>MIDI export</li>
+<li>Ability to import songs from storage</li>
+<li>Ability to import instruments from storage</li>
+<li>Ability to import DPCM samples from other FMS projects on device storage</li>
+</ul>
+</li>
+<li>PAL expansion audio support (Thanks Steo!)</li>
+<li>Minor adjustment to NES APU volumes (Thanks Steo!)</li>
+<li>SDAS/GBDK support (Thanks Michel Iwaniec!)</li>
+<li>Russian translation (Thanks Alex, Mkliukang1 and Furmilion!)</li>
+<li>Korean translation (Thanks Nyaongi and Ospaggi!)</li>
+<li>Upgrade all platforms to .NET 8.0</li>
+</ul>
+<p>Breaking/Behavior changes:</p>
+<ul>
+<li>Default bass cutoff and filter frequencies where changed to better match the hardware</li>
+<li>NES APU volumes have been adjusted slightly to better match the hardware</li>
+<li>Most "Select All" / "Select None" buttons have been replace by context menus (right-click on desktop, long press on mobile).</li>
+</ul>
 <h2 id="version-421-hotfix">Version 4.2.1 (Hotfix)</h2>
 <p>Changes/Fixes:</p>
 <ul>
@@ -1074,19 +1115,20 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -1106,7 +1148,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
