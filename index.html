@@ -37,78 +37,41 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is a simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
-			<h1>Latest Hotfix 4.2.1 (May 26th 2024)</h1>	
+			<h1>Latest Major Release 4.3.0 (December 19th 2024)</h1>	
+
+			<p>FamiStudio 4.3.0 was just released! Click <a href="https://famistudio.org/doc/releases/430/">here</a> or on the image below to see some of the new features and how to use them.</p>
+
+			<center><a href="https://famistudio.org/doc/releases/430/"><img src='https://famistudio.org/doc/releases/430/Thumbnail430.png' style="width:80%" /></a></center>
 
 			<p><b>Changes/Fixes:</b></p>
 			<ul>
-				<li>Fixed MSI installer pointing to .NET 5.0 instead of 7.0</li>
-				<li>Fixed sound engine settings not being saved in project properties</li>
-				<li>Fixed bass filter setting not being saved in app settings</li>
-				<li>Fixed VRC6 initialization in sound engine by writing zero to $9003</li>
-				<li>Fixed issue with vibrato in sound engine that could stall the audio</li>
-				<li>Fixed the "+" button of DPCM samples in project explorer on mobile</li>
-				<li>Fixed crash when pasting items between projects when using folders</li>
-				<li>Fixed GLFW compatibility issues on Linux (Thanks Steo!)</li>
-				<li>Fixed incorrect size of FDS disks</li>
-				<li>Fixed issue with non-looping relative pitch envelope in Sound Engine/NSF/ROM</li>
-				<li>Fixed issue with volume slides and FamiTracker tempo in Sound Engine/NSF/ROM</li>
-				<li>Made the video looping more consistent with how the audio loops in the app</li>
-				<li>Made it clearer that you cannot rename multiple patterns</li>
-				<li>Optimized VGM import</li>
-			</ul>
-
-			<h1>Latest Major Release 4.2.0 (April 20th 2024)</h1>	
-
-			<p>FamiStudio 4.2.0 was just released! Click <a href="https://famistudio.org/doc/releases/420/">here</a> or on the image below to see the top 10 new features and how to use them.</p>
-
-			<center><a href="https://famistudio.org/doc/releases/420/"><img src='https://famistudio.org/doc/releases/420/Thumbnail420.png' style="width:80%" /></a></center>
-
-			<p><b>Changes/Fixes:</b></p>
-			<ul>
-				<li>S5B envelope support (S5B &amp; EPSM)</li>
-				<li>FDS auto-modulation support</li>
-				<li>FDS emulation improvements : Proper filtering, DAC emulation &amp; fixes.</li>
-				<li>Phase reset support</li>
-				<li>Accurate seek support (fully emulate entire song from start, useful for phase resets)</li>
-				<li>Allow disabling attack on notes if all instrument envelopes matches (useful for FM channels)</li>
-				<li>Folders support in Project Explorer</li>
-				<li>More filtering options for audio expansions &amp; ability to store settings in project</li>
-				<li>Support for up to 256 instruments (for both regular and expansion) in sound engine</li>
-				<li>German translation (thanks Arda &amp; VRC6Lover123!)</li>
-				<li>Audio backend improvements:<ul>
-				<li>Reduced audio latency on all platform </li>
-				<li>Switch to WASAPI on Windows (non-exclusive mode)</li>
-				<li>Audio device change detection &amp; improved BT headphones support on MacOS</li>
-			</ul>
-			</li>
-				<li>Video export improvements: 
+				<li>Support for custom tuning per project (ex: where A is not 440Hz)</li>
+				<li>N163 wave auto position assignment</li>
+				<li>Improve conflict resolution when copy-pasting between songs/projects</li>
+				<li>New in-app font (Noto Sans) : More readable at low resolution and supports international characters</li>
+				<li>Unifying UI code between desktop/mobile, mobile dialogs will now look and feel more like the desktop version</li>
+				<li>Making more features available on mobile:</li>
 					<ul>
-						<li>Unified piano roll mode</li>
-						<li>Piano roll 3D effect</li>
-						<li>Option to overlay registers</li>
-						<li>Preview mode</li>
+						<li>Shy mode</li>
+						<li>MIDI import</li>
+						<li>MIDI export</li>
+						<li>Ability to import songs from storage</li>
+						<li>Ability to import instruments from storage</li>
+						<li>Ability to import DPCM samples from other FMS projects on device storage</li>
 					</ul>
-				</li>
-			<li>Small quality of life improvements:
-				<ul>
-					<li>Eraser mode</li>
-					<li>Ability to copy samples between instruments</li>
-					<li>Ability to type effect values and project explorer parameters</li>
-					<li>Function to replace specific instruments</li>
-					<li>Logarithmic sliders for effects and parameters with huge values</li>
-				</ul>
-			</li>
+				<li>PAL expansion audio support (Thanks Steo!)</li>
+				<li>Minor adjustment to NES APU volumes (Thanks Steo!)</li>
+				<li>SDAS/GBDK support (Thanks Michel Iwaniec!)</li>
+				<li>Russian translation (Thanks Alex, Mkliukang1 and Furmilion!)</li>
+				<li>Korean translation (Thanks Nyaongi and Ospaggi!)</li>
+				<li>Upgrade all platforms to .NET 8.0</li>
+			</ul>
 			</ul>
 				<p><b>Breaking/Behavior changes:</b></p>
 			<ul>
-				<li>FDS mod speed/depth effects will be resetted to the instrument values on notes with an attack.</li>
-				<li>FDS emulation now matches the hardware much more closely. Some instruments may now sound very different.</li>
-				<li>S5B/EPSM noise no longer has a "NOP" frequency, noise frequency will be set if it is enabled by the mixer envelope. </li>
-			</ul>
-			<p><b>System Requirement Changes:</b></p>
-			<ul>
-				<li>Upgraded to .NET 7.0</li>
-				<li>Minimum OpenGL requirement for Desktop lowered to OpenGL 3.0 (was 3.3)</li>
+				<li>Default bass cutoff and filter frequencies where changed to better match the hardware</li>
+				<li>NES APU volumes have been adjusted slightly to better match the hardware</li>
+				<li>Most "Select All" / "Select None" buttons have been replace by context menus (right-click on desktop, long press on mobile).</li>
 			</ul>
 
 			<p>Release notes of previous versions can be found in the <a href='https://famistudio.org/doc/changelog/'>documentation</a>.</p>
@@ -120,33 +83,33 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><img src="android.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://play.google.com/store/apps/details?id=org.famistudio"><center>Play Store (Recommended)</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/org.famistudio.apk"><center>APK</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/org.famistudio.apk"><center>APK</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-SoundEngine.zip"><img src="6502.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.2.1/FamiStudio421-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-SoundEngine.zip"><img src="6502.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.0/FamiStudio430-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
 				</tr>
 			</table>
 
