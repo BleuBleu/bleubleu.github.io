@@ -37,11 +37,30 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is a simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
-			<h1>Latest Hotfix Release 4.3.2 (January 17th 2025)</h1>	
+			<h1>Latest Hotfix Release 4.3.3 (Febuary 28th 2025)</h1>	
 
 			<p><b>Changes/Fixes:</b></p>
 			<ul>
-				<li>Fixed crash when exporting audio/video</li>
+				<li>First IOS release!</li>
+				<li>Improved playback speed precision to better match hardware</li>
+				<li>Improved NSF import duration accuracy</li>
+				<li>Fixed toolbar issue when resizing that could cause the timecode to be misplaced</li>
+				<li>Fixed DPCM bit reversing on NSF and VGM import</li>
+				<li>Fixed temp folder issue which caused freezing on Linux</li>
+				<li>Fixed several typos and localization issues</li>
+				<li>Fixed DPCM reload button always being visually enabled</li>
+				<li>Fixed crash when trying to use undo/redo during certain operations</li>
+				<li>Fixed app not asking you to save new project if app was first minimized on mobile</li>
+				<li>Fixed issues on Linux using Wayland when using high DPI scalings</li>
+				<li>Fixed instrument/arpeggio eyedropper</li>
+				<li>Fixed metronome volume not applying until you restarted the app</li>
+				<li>Added tooltip for "Select All / Select None" </li>
+				<li>Reversed bits of Journey to Silius demo song to sound as the authors intended</li>
+				<li>Most of these fixes/improvements were done in collaboration with Steo, thanks!</li>
+			</ul>
+			<p><b>Breaking/Behavior changes:</b></p>
+			<ul>
+				<li>Default snap precision on Mobile is now 1/4 beat (1/16th note)</li>
 			</ul>
 
 			<h1>Latest Major Release 4.3.0 (December 19th 2024)</h1>	
@@ -106,6 +125,12 @@
 						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.3.2/FamiStudio432-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
+				<tr>
+					<td style="padding: 20px;" align="center"><a href="https://apps.apple.com/us/app/famistudio/id6741355257"><img src="iOS.png"></a></td>
+					<td style="padding: 20px;" align="center">
+						<a href="https://apps.apple.com/us/app/famistudio/id6741355257"><center>Apple Store</center></a><br>
+					</td>
+				</tr>				
 				<tr>
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><img src="android.png"></a></td>
 					<td style="padding: 20px;" align="center">
