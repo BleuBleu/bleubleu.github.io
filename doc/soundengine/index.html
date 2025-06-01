@@ -124,6 +124,10 @@
 <li>
     <a href="../releases/430/" class="dropdown-item">FamiStudio 4.3.0 Highlights</a>
 </li>
+                                    
+<li>
+    <a href="../releases/440/" class="dropdown-item">FamiStudio 4.4.0 Highlights</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
@@ -297,7 +301,9 @@
 </ul>
 <p>Another approach would be to compile the engine as a separate obj file and link it. This might require you to import the famistudio_xxx calls in other parts of your project.</p>
 <p>All the instructions to use it in your project are included as comments at the top of these files.</p>
-<p>For using the C bindings with CC65, you will need to include the <code>famistudio_cc65.h</code> header and also include the <code>famistudio_ca65.s</code> into your assembly startup routine. Make sure that <code>FAMISTUDIO_CFG_C_BINDINGS = 1</code> is set either as part of your external config or in the file or else the linker will be unable link object files.</p>
+<p>For using the C bindings with CC65, you will need to include the <code>famistudio_cc65.h</code> header and also include the <code>famistudio_ca65.s</code> into your assembly startup routine.</p>
+<p>For using the C bindings with SDCC, you will need to include the <code>famistudio_sdcc.h</code> header and also include the <code>famistudio_sdas.s</code> into your assembly startup routine. Make sure that <code>FAMISTUDIO_CFG_C_BINDINGS = 1</code> is set either as part of your external config or in the file in order to call the functions from C.</p>
+<p>For using the C bindings with LLVM-MOS, you will need to follow the instructions for building CA65 object files in LLVM-MOS and compile and link the CA65 assembly source <code>famistudio_ca65.s</code> in your project with the appropriate configuration. You can then use the provided header file <code>famistudio_llvmmos.h</code> to call the Famistudio functions.</p>
 <h2 id="interface">Interface</h2>
 <p>The interface is pretty much the same as FamiTone2, with a slightly different naming convention. The subroutines you can call from your game are:</p>
 <ul>

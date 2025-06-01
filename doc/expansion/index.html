@@ -122,6 +122,10 @@
 <li>
     <a href="../releases/430/" class="dropdown-item">FamiStudio 4.3.0 Highlights</a>
 </li>
+                                    
+<li>
+    <a href="../releases/440/" class="dropdown-item">FamiStudio 4.4.0 Highlights</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
@@ -240,7 +244,7 @@
 <p><strong>Sunsoft 5B</strong>: Add 3 extra square channels with shared noise &amp; envelope capabilities. These channels are fixed at a duty cycle of 50%. It was based off the Yamaha YM2149F. While this expansion was extremely powerful, it was only ever used in one game (Gimmick!) and this game did not make use of any advanced features of the chip. For this reason most emulators only support a small subset of features.</p>
 </li>
 <li>
-<p><strong>EPSM</strong>: EPSM is not an audio expansion that ever used, or even existed in the lifetime of the NES, but rather the pet project of <a href="https://github.com/Perkka2/EPSM">Perkka</a> who designed a small circuit board that can be plugged in the expansion port of the NES and controlled by it to produce sound. The expansion is based off the Yamaha YMF288 chip and adds 3 extra square channels with shared noise capabilities, 6 FM synthesis channels and 6 rhythm channels. The square are fixed at a duty cycle or 50%. Those are essentially the same as Sunsoft S5B. The FM channels are 4-OP channels that can be configured independently. The rhythm channels are 6 pre-defined drum samples.</p>
+<p><strong>EPSM</strong>: EPSM is not an audio expansion that was ever used, which never even existed in the lifetime of the NES, but rather the pet project of <a href="https://github.com/Perkka2/EPSM">Perkka</a> who designed a small circuit board that can be plugged in the expansion port of the NES and controlled by it to produce sound. The expansion is based off the Yamaha YMF288 chip and adds 3 extra square channels with shared noise capabilities, 6 FM synthesis channels and 6 rhythm channels. The square are fixed at a duty cycle or 50%. Those are essentially the same as Sunsoft S5B. The FM channels are 4-OP channels that can be configured independently. The rhythm channels are 6 pre-defined drum samples.</p>
 </li>
 </ul>
 <h2 id="enabling-expansion-audio">Enabling expansion audio</h2>
@@ -302,18 +306,19 @@
 <ul>
 <li><strong>Master Volume</strong> : At full volume the FDS can be significantly louder than the regular channels. The chip also supported 40%, 50% and 66% which makes the sound a lot more balanced.</li>
 <li><strong>Wave Preset</strong> : A few preset that you can use to set the waveform envelope.</li>
+<li><strong>Wave Count</strong> : The number of waveforms the instrument will contain. The maximum amount is 16.</li>
 <li><strong>Mod Preset</strong> : A few preset that you can use to set the modulation envelope.</li>
 <li><strong>Mod Speed</strong> : The speed of the modulation.</li>
 <li><strong>Mod Depth</strong> : The depth of the modulation.</li>
 <li><strong>Mod Delay</strong> : A delay, in frames (1/60th of a second) before enabling modulation.</li>
-<li><strong>Resample Period</strong>, <strong>Offset</strong> and <strong>Normalize</strong> : See the <a href="#resampling-wav-files-for-n163-and-fds">resampling section</a></li>
 <li><strong>Auto-Mod</strong> and <strong>Numerator</strong> / <strong>Denominator</strong> : Toggles Auto-Modulation and allow setting a numerator/denominator fraction. </li>
+<li><strong>Resample Period</strong>, <strong>Offset</strong> and <strong>Normalize</strong> : See the <a href="#resampling-wav-files-for-n163-and-fds">resampling section</a></li>
 </ul>
 <p>When <strong>Auto-Mod</strong> is enabled, the instrument will automatically compute the modulation speed as a fraction of the note's pitch. For example setting Numerator = 1 and Denominator = 4 means the modulation speed will be 1/4 of the note's pitch. Since this process involves multiplications and divisions and the NES/Famicom is ill-equipped for this kind of task, it is highly recommend that you limit yourself to simple fractions such as 1/4 and avoid things like 13/27.</p>
 <p>When changing the values of the sliders with huge values (such as the Mod Speed), you can hold Shift while dragging to fine tune the exact value.</p>
 <h2 id="namco-163">Namco 163</h2>
 <p>N163 instrument can have custom user-drawn waveforms. The size of the waveform is configurable, but limited by the amount of N163 RAM available, which decreases as more N163 channels are added. Waveforms can also be resampled from a WAV file, see the <a href="#resampling-wav-files-for-n163-and-fds">resampling section</a> for more details.</p>
-<p>Since the amount of RAM is limited, and there can be up to 8 channels playing at the same time, it is the user's responsability to make sure waves do not overlap. For example, if 2 N163 channels are playing 2 different instruments at the same time, a sine wave and a triangle wave, they will have to occupy different RAM locations. Both cannot be a RAM position 0, for example. If using a wave size of 32, we could place one at offset 0, and the second at offset 32. </p>
+<p>Since the amount of RAM is limited, and there can be up to 8 channels playing at the same time, it is the user's responsibility to make sure waves do not overlap. For example, if 2 N163 channels are playing 2 different instruments at the same time, a sine wave and a triangle wave, they will have to occupy different RAM locations. Both cannot be a RAM position 0, for example. If using a wave size of 32, we could place one at offset 0, and the second at offset 32. </p>
 <p>The register viewer can be used to dianose wave overlap issues. Look for error message in the RAM diagram if you think there are issues.</p>
 <p><img alt="" src="../images/N163Overlap.png#center" /></p>
 <p>FamiStudio also supports cycling through multiple waveform in time. All the waveforms are presented visually as a single massive waveform, and each individual waveform can be repeated for a number of frames by setting the value of the "Repeat" effect in the effect panel. Moreover, both Loop and Release points can be configured. The current maximum number of wave data is currently 1024 bytes per instrument. So a wave size of 32 will be limited to 32 individual waves, where as a wave size of 16 will be able to have twice that amount.</p>
@@ -331,7 +336,7 @@
 <li><strong>Wave Size</strong> : The N163 chip had only 128 of RAM to store all the waveforms used at any given time. For example, if you use waveforms of size 32, you can only use 4 unique instrument at any given time. Using more will result in channels using wrong instruments.</li>
 <li><strong>Wave Auto-Position</strong> : Let FamiStudio automatically position the waves to try to avoid overlap. When this is active, every time you press Play, FamiStudio will scan all songs and all notes and try to assign a position to all the N163 instruments that have this option enabled. Note that this can fail if using too many large waves. When the auto-assignment algorithm fails, you will get no error message and will need to use the register viewer to diagnose issues, as mentioned above. </li>
 <li><strong>Wave Position</strong> : The position, in the 128 bytes of memory, of the waveform. You must manually make sure that different waveforms don't overlap.</li>
-<li><strong>Wave Count</strong> : The position, in the 128 bytes of memory, of the waveform. You must manually make sure that different waveforms don't overlap.</li>
+<li><strong>Wave Count</strong> : The number of waveforms the instrument will contain. The maximum amount depends on the wave size.</li>
 <li><strong>Resample Period</strong>, <strong>Offset</strong> and <strong>Normalize</strong> : See the <a href="#resampling-wav-files-for-n163-and-fds">resampling section</a></li>
 </ul>
 <h2 id="sunsoft-5b">Sunsoft 5B</h2>

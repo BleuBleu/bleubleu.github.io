@@ -124,6 +124,10 @@
 <li>
     <a href="../releases/430/" class="dropdown-item">FamiStudio 4.3.0 Highlights</a>
 </li>
+                                    
+<li>
+    <a href="../releases/440/" class="dropdown-item">FamiStudio 4.4.0 Highlights</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
@@ -264,6 +268,12 @@ samples. </p>
 </li>
 <li>
 <p><strong>Round to 16 + 1</strong> : The sample will be resampled in a way that the end of sample aligned to 16 bytes (plus one). This may affect the pitch slightly. This is a good mode to create looping samples.</p>
+</li>
+<li>
+<p><strong>Trim to 16</strong> : The sample will be aligned to a multiple of 16 bytes. Any remaining bytes from a multiple of 16 will be trimmed. One extra byte of garbage will play every time the sample is played, but this is usually not audible.</p>
+</li>
+<li>
+<p><strong>Trim to 16 + 1</strong> : The sample will be aligned to a multiple of 16 bytes (plus one). Any remaining bytes from a multiple of 16 will be trimmed. One extra byte will be added to prevent playing a byte of garbage, but it will waste 15 bytes.</p>
 </li>
 </ul>
 </li>
