@@ -169,6 +169,10 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#version-443-hotfix" class="nav-link">Version 4.4.3 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#version-442-hotfix" class="nav-link">Version 4.4.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
@@ -387,6 +391,24 @@
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release. </p>
 <p>To download older versions or view the release dates, please visit the <a href="https://github.com/BleuBleu/FamiStudio/releases">Github Releases</a> page.</p>
+<h2 id="version-443-hotfix">Version 4.4.3 (Hotfix)</h2>
+<p>Changes/Fixes:</p>
+<ul>
+<li>Fixed an issue on song change, where the incorrect channel effects would be displayed (Thanks Steo!)</li>
+<li>Fixed a text import issue where a file could have an invalid pattern length / incorrect tempo (Thanks Steo!)</li>
+<li>Fixed issue with NumericUpDown textboxes getting clamped incorrectly despite maximum value changing (Thanks Steo!)</li>
+<li>Fixed piano roll video rendering issue where scrollbars being enabled caused a gap (Thanks Steo!)</li>
+<li>Fixed sequencer special paste insert issue where shifted regular pattern would remain custom (Thanks Steo!)</li>
+<li>Fixed crash when using full-width digits for names (Thanks Steo!)</li>
+<li>Fixed crash when exporting songs with duplicated sample mappings (Thanks James Rowe!)</li>
+<li>Fixed ASM6 SFX export when names have dashes</li>
+<li>Fixed sound engine export issue with delayed cuts</li>
+<li>Fixed overly large move cursor on MacOS retina</li>
+<li>Fixed DPCM sample preview sounding choppy on Android</li>
+<li>Reverted some recent MIDI changes that could delay notes by 1 frames in certain situations</li>
+<li>Added option to update the source for a DPCM sample</li>
+<li>Android native libraries are aligned to 16KB pages to make Google happy</li>
+</ul>
 <h2 id="version-442-hotfix">Version 4.4.2 (Hotfix)</h2>
 <p>Changes/Fixes:</p>
 <ul>

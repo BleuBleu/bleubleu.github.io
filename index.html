@@ -37,18 +37,24 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is a simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
-			<h1>Latest Hotfix Release 4.4.2 (August 10th 2025)</h1>	
+			<h1>Latest Hotfix Release 4.4.3 (October 29th 2025)</h1>	
 
 			<p>Changes/Fixes:</p>
 			<ul>
-				<li>Fixed deadlock on IOS when pressing Play/Rewind rapidly</li>
-				<li>Fixed importing of NSF using the triangle length counter</li>
-				<li>Fixed DPCM samples getting mixed up when exporting to NSF/ROM</li>
-				<li>Fixed grey square when inputting texture on some Android version (Thanks Steo!)</li>
-				<li>Multiple DPI fixes, including manual scaling on macOS (Thanks Steo!)</li>
-				<li>Multiple VGM import fixes (Thanks Perkka!)</li>
-				<li>Added new DPCM options when exporting to sound engine (Thanks Alex for the feedback/testing!)</li>
-				<li>Upgraded to latest Android SDK</li>
+				<li>Fixed an issue on song change, where the incorrect channel effects would be displayed (Thanks Steo!)</li>
+				<li>Fixed a text import issue where a file could have an invalid pattern length / incorrect tempo (Thanks Steo!)</li>
+				<li>Fixed issue with NumericUpDown textboxes getting clamped incorrectly despite maximum value changing (Thanks Steo!)</li>
+				<li>Fixed piano roll video rendering issue where scrollbars being enabled caused a gap (Thanks Steo!)</li>
+				<li>Fixed sequencer special paste insert issue where shifted regular pattern would remain custom (Thanks Steo!)</li>
+				<li>Fixed crash when using full-width digits for names (Thanks Steo!)</li>
+				<li>Fixed crash when exporting songs with duplicated sample mappings (Thanks James Rowe!)</li>
+				<li>Fixed ASM6 SFX export when names have dashes</li>
+				<li>Fixed sound engine export issue with delayed cuts</li>
+				<li>Fixed overly large move cursor on MacOS retina</li>
+				<li>Fixed DPCM sample preview sounding choppy on Android</li>
+				<li>Reverted some recent MIDI changes that could delay notes by 1 frames in certain situations</li>
+				<li>Added option to update the source for a DPCM sample</li>
+				<li>Android native libraries are aligned to 16KB pages to make Google happy</li>
 			</ul>
 
 			<h1>Latest Major Release 4.4.0 (June 1st 2025)</h1>	
@@ -81,21 +87,21 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.2/FamiStudio442-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.3/FamiStudio443-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.2/FamiStudio442-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.2/FamiStudio442-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.3/FamiStudio443-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.3/FamiStudio443-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.2/FamiStudio442-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.2/FamiStudio442-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.3/FamiStudio443-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.3/FamiStudio443-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.2/FamiStudio442-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.3/FamiStudio443-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.2/FamiStudio442-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.3/FamiStudio443-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
@@ -108,7 +114,7 @@
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><img src="android.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://play.google.com/store/apps/details?id=org.famistudio"><center>Play Store (Recommended)</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.2/org.famistudio.apk"><center>APK</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.3/org.famistudio.apk"><center>APK</center></a>
 					</td>
 				</tr>
 				<tr>
