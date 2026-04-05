@@ -37,37 +37,19 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is a simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
-			<h1>Latest Hotfix Release 4.4.4 (November 16th 2025)</h1>	
+			<h1>Latest Major Release 4.5.0 (April 5th 2026)</h1>	
 
-			<p>Changes/Fixes:</p>
+			<p>FamiStudio 4.5.0 was just released! This release, like the previous one, was primarily handled by Steo. Many thanks for their continued effort. This will likely remain the case for the foreseeable future while I focus on other projects.</p>
+
+			<p>Changes:</p>
 			<ul>
-				<li>Fixed an issue where warning icons could overlap certain controls (Thanks Steo!)</li>
-				<li>Fixed an issue where an incorrect arpeggio envelope was used at the song loop point when exporting to NSF/Sound Engine (Thanks Steo!)</li>
-				<li>Fixed an issue where releases could be skipped when exporting to NSF/Sound Engine.</li>
-				<li>Fixed an issue with delayed cuts when exporting to NSF/Sound Engine.</li>
-				<li>Fixed crash when entering filenames containing slashes on Linux (Thanks Steo!)</li>
-				<li>Attempting to bring back armv7 (32-bit) support on Android, untested, may crash.</li>
-			</ul>
-
-			<h1>Latest Major Release 4.4.0 (June 1st 2025)</h1>	
-
-			<p>FamiStudio 4.4.0 was just released! This is the first major release that has been driven almost entirely by community contributions. While I am focusing on another project, Steo has stepped up in a big way, conducting extensive hardware comparisons and adding numerous quality-of-life improvements. Thanks to him and everyone who contributed to this release!</p>
-
-			<p>Changes/Fixes:</p>
-			<ul>
-				<li>FDS multiwave support (thanks Steo!)</li>
-				<li>DPCM options for "Trim to 16" and "Trim to 16+1" (thanks Steo!)</li>
-				<li>Separate bass filter for FDS (thanks Steo!)</li>
-				<li>PWM for FDS, including a fourth PWM preset (thanks Steo!)</li>
-				<li>VGM FDS import support (thanks Steo!)</li>
-				<li>NSF/VGM import tuning option (thanks Steo!)</li>
-				<li>Linux support for kdialog and zenity for dialogs (thanks Steo!)</li>
-				<li>Reworked C-binding and ability to combine identical channels in sound engine (thanks jroweboy!)</li>
-			</ul>
-
-			<p>Breaking/Behavior changes:</p>
-			<ul>
-				<li>Default filtering options for FDS were changed slightly to better match the hardware</li>
+				<li>Added option to disable attack on DPCM, this will ignore initial DMC value</li>
+				<li>Added option to use DPCM sample colours in oscilloscope video export </li>
+				<li>Added option to import initial DMC values for NSF</li>
+				<li>Added scales to the piano roll context menu, right-click / long press an empty area to access</li>
+				<li>Added double click/tap in project explorer to open their properties</li>
+				<li>Added saving project export settings for each mode</li>
+				<li>Added DMC initial values to text export</li>
 			</ul>
 
 			<p>Release notes of previous versions can be found in the <a href='https://famistudio.org/doc/changelog/'>documentation</a>.</p>
@@ -79,21 +61,21 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.4/FamiStudio444-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.4/FamiStudio444-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.4/FamiStudio444-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.4/FamiStudio444-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.4/FamiStudio444-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.4/FamiStudio444-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.4/FamiStudio444-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
@@ -106,12 +88,12 @@
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><img src="android.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://play.google.com/store/apps/details?id=org.famistudio"><center>Play Store (Recommended)</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.4/org.famistudio.apk"><center>APK</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/org.famistudio.apk"><center>APK</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.1/FamiStudio441-SoundEngine.zip"><img src="6502.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.4.1/FamiStudio441-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-SoundEngine.zip"><img src="6502.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.0/FamiStudio450-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
 				</tr>
 			</table>
 
