@@ -173,6 +173,10 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#version-454-hotfix" class="nav-link">Version 4.5.4 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#version-453-hotfix" class="nav-link">Version 4.5.3 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
@@ -415,6 +419,28 @@
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release. </p>
 <p>To download older versions or view the release dates, please visit the <a href="https://github.com/BleuBleu/FamiStudio/releases">Github Releases</a> page.</p>
+<h2 id="version-454-hotfix">Version 4.5.4 (Hotfix)</h2>
+<p>This is a 100% community-contributed release. All changes are by Steo, unless otherwise noted.</p>
+<p>Changes/Fixes:</p>
+<ul>
+<li>Fixed incorrect GD3 info being imported to project upon importing a VGM file</li>
+<li>Fixed mobile issue where tapping two different sequencer icons could register as a double-tap</li>
+<li>Fixed video export issue where a DPCM note touching the end of the song retriggered on loop</li>
+<li>Fixed NSF / VGM import issue that resulted in many fine-pitches incorrectly being -1</li>
+<li>Fixed NSF / VGM import issue that caused fine-pitch to always reset to 0 on release</li>
+<li>Fixed minor oscilloscope issues on mobile</li>
+<li>Fixed crash regarding pasting notes without creating missing samples then using cut / copy</li>
+<li>Fixed text import issue that caused tempos of 75 or lower to incorrectly give a tempo error</li>
+<li>Fixed NSF / VGM import issue regarding MMC5 instruments not being compatible with 2A03</li>
+<li>Fixed parsing of MIDI files containing system exclusive messages</li>
+<li>Fixed crash on mobile when cancelling export then exporting again shortly afterwards</li>
+<li>Fixed issue when importing N163 instruments into a project with a higher N163 channel count</li>
+<li>Fixed issue where toggling "fully emulate when seeking" in settings wouldn't recreate players</li>
+<li>Fixed cursor hotspot on Hi-DPI linux (Thanks eliasdaler!)</li>
+<li>Fixed VRC7 ROM issues on real hardware (Thanks aeromodes!)</li>
+<li>Added warning on note/period overflows when exporting (Thanks aeromodes!)</li>
+<li>Minor localization changes (thanks to all the localizers!)</li>
+</ul>
 <h2 id="version-453-hotfix">Version 4.5.3 (Hotfix)</h2>
 <p>This release was also 100% handled by Steo, I'm just publishing it. Thanks!!</p>
 <p>Changes/Fixes:</p>

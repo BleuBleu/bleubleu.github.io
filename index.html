@@ -37,17 +37,29 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is a simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
-			<h1>Latest Hotfix 4.5.3 (August 10th 2026)</h1>	
+			<h1>Latest Hotfix 4.5.4 (November 12th 2026)</h1>	
 
-			<p>FamiStudio 4.5.3 was just released! This release was entirely handled by Steo. Many thanks for their continued effort.</p>
+			<p>FamiStudio 4.5.4 was just released! This is a 100% community-contributed release. All changes are by Steo, unless otherwise noted.</p>
 
-			<p>Changes:</p>
+			<p>Changes/Fixes:</p>
 			<ul>
-				<li>Fixed an issue where certain PAL VGM imports would be too slow</li>
-				<li>Fixed an issue regarding certain VGM import data being incorrect</li>
-				<li>Fixed crash when right clicking a note when no arppegio (None) was selected</li>
-				<li>Fixed some notes and envelopes in the Mega Man 2 demo song</li>
-				<li>Fixed NSF/ROM export issue introduced in 4.5.2</li>
+				<li>Fixed incorrect GD3 info being imported to project upon importing a VGM file</li>
+				<li>Fixed mobile issue where tapping two different sequencer icons could register as a double-tap</li>
+				<li>Fixed video export issue where a DPCM note touching the end of the song retriggered on loop</li>
+				<li>Fixed NSF / VGM import issue that resulted in many fine-pitches incorrectly being -1</li>
+				<li>Fixed NSF / VGM import issue that caused fine-pitch to always reset to 0 on release</li>
+				<li>Fixed minor oscilloscope issues on mobile</li>
+				<li>Fixed crash regarding pasting notes without creating missing samples then using cut / copy</li>
+				<li>Fixed text import issue that caused tempos of 75 or lower to incorrectly give a tempo error</li>
+				<li>Fixed NSF / VGM import issue regarding MMC5 instruments not being compatible with 2A03</li>
+				<li>Fixed parsing of MIDI files containing system exclusive messages</li>
+				<li>Fixed crash on mobile when cancelling export then exporting again shortly afterwards</li>
+				<li>Fixed issue when importing N163 instruments into a project with a higher N163 channel count</li>
+				<li>Fixed issue where toggling "fully emulate when seeking" in settings wouldn't recreate players</li>
+				<li>Fixed cursor hotspot on Hi-DPI linux (Thanks eliasdaler!)</li>
+				<li>Fixed VRC7 ROM issues on real hardware (Thanks aeromodes!)</li>
+				<li>Added warning on note/period overflows when exporting (Thanks aeromodes!)</li>
+				<li>Minor localization changes (thanks to all the localizers!)</li>
 			</ul>
 
 			<h1>Latest Major Release 4.5.0 (April 5th 2026)</h1>	
@@ -74,21 +86,21 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/FamiStudio453-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.4/FamiStudio454-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/FamiStudio453-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/FamiStudio453-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.4/FamiStudio454-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.4/FamiStudio454-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/FamiStudio453-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/FamiStudio453-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.4/FamiStudio454-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.4/FamiStudio454-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/FamiStudio453-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.4/FamiStudio454-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/FamiStudio453-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.4/FamiStudio454-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
@@ -101,7 +113,7 @@
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><img src="android.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://play.google.com/store/apps/details?id=org.famistudio"><center>Play Store (Recommended)</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/org.famistudio.apk"><center>APK</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.5.4/org.famistudio.apk"><center>APK</center></a>
 					</td>
 				</tr>
 				<tr>
